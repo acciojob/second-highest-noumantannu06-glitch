@@ -5,7 +5,7 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
-	 <h1>Find the Second Highest Element</h1>
+	   <h1>Find the Second Highest Element</h1>
     <input type="text" id="arrayInput" placeholder="Enter array elements separated by commas" />
     <button onclick="findSecondHighest()">Find Second Highest</button>
     <div id="result"></div>
@@ -14,8 +14,8 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			      if (arr.length < 2) {
-                return -Infinity;
+			     if (arr.length === 0 || arr.length === 1) {
+                return -Infinity; // Return -Infinity for empty array or single element
             }
 
             // Use a Set to remove duplicates
@@ -23,7 +23,7 @@
 
             // Check if we have enough unique elements
             if (uniqueElements.length < 2) {
-                return -Infinity;
+                return -Infinity; // Return -Infinity if not enough unique elements
             }
 
             // Sort the unique elements in descending order
