@@ -5,11 +5,40 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
+	<h1>Find the Second Highest Element</h1>
+    <input type="text" id="arrayInput" placeholder="Enter array elements separated by commas" />
+    <button onclick="findSecondHighest()">Find Second Highest</button>
+    <div id="result"></div>
 
 <body>	
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			     if (arr.length < 2) {
+                return -Infinity;
+            }
+            
+        
+            const uniqueElements = Array.from(new Set(arr));
+            
+            
+            if (uniqueElements.length < 2) {
+                return -Infinity;
+            }
+            
+            
+            uniqueElements.sort((a, b) => b - a);
+            
+            
+            return uniqueElements[1];
+        }
+
+        function findSecondHighest() {
+            const input = document.getElementById('arrayInput').value;
+            const arr = input.split(',').map(Number); // Convert input to an array of numbers
+            const result = secondHighest(arr);
+            document.getElementById('result').innerText = 'Second Highest Element: ' + result;
+        }
 			
 		}
 
