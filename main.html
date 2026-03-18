@@ -5,16 +5,15 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
-	 <h1>Find the Second Highest Element</h1>
+	<h1>Find the Second Highest Element</h1>
     <input type="text" id="arrayInput" placeholder="Enter array elements separated by commas" />
     <button onclick="findSecondHighest()">Find Second Highest</button>
     <div id="result"></div>
 
 <body>	
 	<script>
-		function secondHighest(arr) {
-			//Write your code here
-			 if (arr.length === 0 || arr.length === 1) {
+		 function secondHighest(arr) {
+            if (arr.length === 0 || arr.length === 1) {
                 return -Infinity; // Return -Infinity for empty array or single element
             }
 
@@ -39,18 +38,6 @@
             const result = secondHighest(arr);
             document.getElementById('result').innerText = 'Second Highest Element: ' + result;
         }
-			
-		}
-
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
